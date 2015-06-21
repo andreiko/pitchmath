@@ -3,6 +3,10 @@ class Chord(object):
         self._notes = notes
 
     @property
+    def notes(self):
+        return self._notes
+
+    @property
     def intervals(self):
         result = []
 
@@ -22,7 +26,7 @@ class Chord(object):
         if 7 in intervals and not intervals & {3, 4, 10, 11}:
             components.append('5')
 
-        return components
+        return ''.join(components)
 
     @property
     def name_index(self):
@@ -38,7 +42,7 @@ class Chord(object):
         if 6 in intervals:
             components.append('(b5)')
 
-        return components
+        return ''.join(components)
 
     @property
     def name(self):
