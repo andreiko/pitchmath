@@ -1,0 +1,4 @@
+*.pyc
+.idae
+*.egg-info
+/dist
